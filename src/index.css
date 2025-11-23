@@ -52,6 +52,10 @@ All colors MUST be HSL.
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     
+    /* Hero gradients - soft, warm, fog-like */
+    --gradient-hero: radial-gradient(ellipse 80% 60% at 50% 40%, hsl(20, 40%, 95%), hsl(220, 14%, 98%) 50%, hsl(0, 0%, 100%) 100%);
+    --gradient-hero-accent: radial-gradient(circle at 30% 50%, hsl(217, 91%, 60%, 0.08), transparent 50%);
+    
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
