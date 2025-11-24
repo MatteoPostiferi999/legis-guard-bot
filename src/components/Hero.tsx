@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import aiAgentHero from "@/assets/ai-agent-hero.png";
+import logoBlack from "@/assets/logo-black.svg";
 
 export const Hero = () => {
   return (
@@ -22,47 +22,39 @@ export const Hero = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 py-32 text-center">
-        {/* AI Agent Visual - Floating */}
-        <motion.div
-          initial={{ opacity: 0, y: 30, scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-16"
-        >
-          <motion.img
-            src={aiAgentHero}
-            alt="Legis AI Agent"
-            className="w-56 h-56 mx-auto drop-shadow-2xl"
-            animate={{ 
-              y: [0, -15, 0],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-        </motion.div>
-
-        {/* Hero Headline - Large & Bold */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-12 md:py-16 text-center flex flex-col items-center justify-center min-h-screen">
+        {/* Hero Headline - Large & Bold - First */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-7xl md:text-8xl lg:text-9xl font-normal mb-8 text-foreground tracking-tight leading-[0.95]"
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl font-normal mb-6 md:mb-8 text-foreground tracking-tight leading-[1.05] max-w-6xl"
         >
           The AI Agent That Makes
           <br />
           <span className="text-primary font-medium">Compliance Effortless</span>
         </motion.h1>
 
+        {/* Logo - Centered Below Title */}
+        <motion.div
+          initial={{ opacity: 0, y: 30, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          className="mb-6 md:mb-8"
+        >
+          <motion.img
+            src={logoBlack}
+            alt="Legis Logo"
+            className="h-12 sm:h-16 md:h-20 lg:h-24 mx-auto"
+          />
+        </motion.div>
+
         {/* Subheadline */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto font-light"
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 md:mb-10 max-w-3xl mx-auto font-light"
         >
           Legis is an autonomous AI agent that automates compliance for Italian SMEs.
           No more manual work, no more costly consultants, no more stress.
@@ -72,7 +64,7 @@ export const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
           className="flex flex-col items-center gap-4"
         >
           <Button size="lg" className="text-lg px-10 h-14 rounded-full shadow-lg hover:shadow-xl transition-all">
